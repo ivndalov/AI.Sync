@@ -1,4 +1,3 @@
-/* Базові налаштування */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,6 @@ img {
     padding: 0 20px;
 }
 
-/* Кнопки */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -42,7 +40,6 @@ img {
 .btn-group { display: flex; gap: 16px; }
 .justify-center { justify-content: center; }
 
-/* Хедер */
 .header { border-bottom: 1px solid #eaeaea; padding: 20px 0; position: sticky; top: 0; background: #fff; z-index: 100;}
 .header-inner { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 22px; color: #000; text-decoration: none; font-weight: 700; }
@@ -50,7 +47,6 @@ img {
 .main-nav button { background: none; border: none; cursor: pointer; color: #666; font-size: 14px; font-weight: 500; transition: 0.2s;}
 .main-nav button.active, .main-nav button:hover { color: #000; font-weight: 600; }
 
-/* Система перемикання сторінок */
 .page { display: none; animation: fadeIn 0.4s ease-in-out; }
 .page.active { display: block; }
 @keyframes fadeIn {
@@ -58,12 +54,10 @@ img {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Секції */
 section { padding: 80px 0; }
 .section-title { text-align: center; font-size: 32px; margin-bottom: 10px; }
 .section-subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 50px; }
 
-/* Hero */
 .hero-box { display: flex; border: 1px solid #eaeaea; }
 .hero-content { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
 .hero-content h1 { font-size: 42px; line-height: 1.2; margin-bottom: 20px; }
@@ -71,7 +65,6 @@ section { padding: 80px 0; }
 .hero-image { flex: 1; border-left: 1px solid #eaeaea; }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; min-height: 400px; }
 
-/* Відгуки */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .review-card { border: 1px solid #eaeaea; padding: 32px; }
 .stars { margin-bottom: 16px; letter-spacing: 2px; }
@@ -81,11 +74,9 @@ section { padding: 80px 0; }
 .author-info h4 { font-size: 14px; }
 .author-info p { font-size: 12px; color: #666; }
 
-/* CTA */
 .cta-image { margin-top: 50px; border: 1px solid #eaeaea; }
 .cta-image img { width: 100%; height: 400px; object-fit: cover; }
 
-/* Прайсинг / Контакти */
 .contact-text { text-align: center; color: #333; margin-bottom: 50px; font-size: 15px; }
 .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 900px; margin: 0 auto; }
 .price-card { border: 1px solid #eaeaea; padding: 40px; }
@@ -98,17 +89,14 @@ section { padding: 80px 0; }
 .features li.check { justify-content: flex-start; color: #333; gap: 10px; }
 .features li.cross { justify-content: flex-start; color: #999; gap: 10px; }
 
-/* Форма контактів */
 .contact-form { max-width: 500px; margin: 0 auto; border: 1px solid #eaeaea; padding: 40px; }
 .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #eaeaea; outline: none; }
 .contact-form textarea { height: 100px; resize: none; }
 
-/* Сторінка "Про нас" (Картки можливостей) */
 .about-card { padding: 40px; color: #fff; }
 .about-card h3 { font-size: 24px; margin-bottom: 15px; }
 .about-card p { opacity: 0.8; font-size: 14px; }
 
-/* Футер */
 .footer { border-top: 1px solid #eaeaea; padding: 60px 0 20px; margin-top: 60px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
 .footer-desc { font-size: 13px; color: #666; margin-top: 10px; }

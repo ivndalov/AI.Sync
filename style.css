@@ -32,21 +32,31 @@ img {
     text-decoration: none;
     border-radius: 4px;
     transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #000;
 }
-.btn-black { background: #000; color: #fff; border: 1px solid #000; }
+.btn-black { background: #000; color: #fff; }
 .btn-black:hover { background: #333; }
-.btn-outline { background: transparent; color: #000; border: 1px solid #000; }
+.btn-outline { background: transparent; color: #000; }
 .btn-outline:hover { background: #f5f5f5; }
 .btn-group { display: flex; gap: 16px; }
 .justify-center { justify-content: center; }
 
 /* Хедер */
-.header { border-bottom: 1px solid #eaeaea; padding: 20px 0; }
+.header { border-bottom: 1px solid #eaeaea; padding: 20px 0; position: sticky; top: 0; background: #fff; z-index: 100;}
 .header-inner { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 22px; color: #000; text-decoration: none; }
+.logo { font-size: 22px; color: #000; text-decoration: none; font-weight: 700; }
 .main-nav ul { display: flex; list-style: none; gap: 30px; }
-.main-nav a { text-decoration: none; color: #666; font-size: 14px; font-weight: 500; }
-.main-nav a.active, .main-nav a:hover { color: #000; font-weight: 600; }
+.main-nav button { background: none; border: none; cursor: pointer; color: #666; font-size: 14px; font-weight: 500; transition: 0.2s;}
+.main-nav button.active, .main-nav button:hover { color: #000; font-weight: 600; }
+
+/* Система перемикання сторінок */
+.page { display: none; animation: fadeIn 0.4s ease-in-out; }
+.page.active { display: block; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* Секції */
 section { padding: 80px 0; }
@@ -85,8 +95,18 @@ section { padding: 80px 0; }
 .package-desc { text-align: center; color: #666; font-size: 13px; margin-bottom: 30px; }
 .features { list-style: none; border-top: 1px solid #eaeaea; }
 .features li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #eaeaea; font-size: 14px; }
-.features li.check { justify-content: flex-start; color: #333; }
-.features li.cross { justify-content: flex-start; color: #999; }
+.features li.check { justify-content: flex-start; color: #333; gap: 10px; }
+.features li.cross { justify-content: flex-start; color: #999; gap: 10px; }
+
+/* Форма контактів */
+.contact-form { max-width: 500px; margin: 0 auto; border: 1px solid #eaeaea; padding: 40px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #eaeaea; outline: none; }
+.contact-form textarea { height: 100px; resize: none; }
+
+/* Сторінка "Про нас" (Картки можливостей) */
+.about-card { padding: 40px; color: #fff; }
+.about-card h3 { font-size: 24px; margin-bottom: 15px; }
+.about-card p { opacity: 0.8; font-size: 14px; }
 
 /* Футер */
 .footer { border-top: 1px solid #eaeaea; padding: 60px 0 20px; margin-top: 60px; }
@@ -94,5 +114,6 @@ section { padding: 80px 0; }
 .footer-desc { font-size: 13px; color: #666; margin-top: 10px; }
 .footer-col h4 { font-size: 14px; margin-bottom: 20px; }
 .footer-col ul { list-style: none; }
-.footer-col li { margin-bottom: 10px; font-size: 13px; color: #666; }
+.footer-col li { margin-bottom: 10px; font-size: 13px; color: #666; cursor: pointer; transition: 0.2s;}
+.footer-col li:hover { color: #000; }
 .footer-bottom { border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 12px; color: #999; text-align: center; }

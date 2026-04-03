@@ -219,24 +219,19 @@
 
     <script>
         function navigate(pageId) {
-            // 1. Ховаємо всі сторінки
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
             
-            // 2. Знімаємо виділення з усіх кнопок меню
             const navButtons = document.querySelectorAll('.main-nav button');
             navButtons.forEach(btn => btn.classList.remove('active'));
             
-            // 3. Показуємо потрібну сторінку
             document.getElementById('page-' + pageId).classList.add('active');
-            
-            // 4. Робимо кнопку меню активною (якщо вона є)
+
             const activeNavBtn = document.getElementById('nav-' + pageId);
             if(activeNavBtn) {
                 activeNavBtn.classList.add('active');
             }
 
-            // 5. Прокручуємо сторінку на самий верх при переході
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
